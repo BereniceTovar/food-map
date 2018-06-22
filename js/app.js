@@ -188,6 +188,7 @@ $('#fast-food').click(function(){
   }
 });
 
+//Función para obtener a la comida saludable
 $('#healthy-food').click(function(){
   var containerInfo = document.getElementById('print-info');
   containerInfo.innerHTML = "";
@@ -214,6 +215,7 @@ $('#healthy-food').click(function(){
   }
 });
 
+//Función para obtener a la comida más económica
 $('#cheap').click(function(){
   var containerInfo = document.getElementById('print-info');
   containerInfo.innerHTML = "";
