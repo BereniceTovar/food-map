@@ -104,7 +104,7 @@ var restaurants = [
 //Función para obtener a los restaurantes
 $('#restaurants').click(function(){
   var containerInfo = document.getElementById('print-info');
-
+  containerInfo.innerHTML = "";
   for(var i = 0; i < restaurants.length; i++){
       var isRestaurant = restaurants[i].restaurant;
       //console.log(isRestaurant)
@@ -137,7 +137,7 @@ $('#restaurants').click(function(){
 //Función para obtener a las cafeterias
 $('#coffe-shops').click(function(){
   var containerInfo = document.getElementById('print-info');
-
+  containerInfo.innerHTML = "";
   for(var i = 0; i < restaurants.length; i++){
       var isCoffeShop = restaurants[i].coffeshop;
       //console.log(isCoffeShop)
@@ -164,7 +164,7 @@ $('#coffe-shops').click(function(){
 //Función para obtener a la comida rapida
 $('#fast-food').click(function(){
   var containerInfo = document.getElementById('print-info');
-
+  containerInfo.innerHTML = "";
   for(var i = 0; i < restaurants.length; i++){
       var isFastFood = restaurants[i].fastFood;
       
@@ -190,7 +190,7 @@ $('#fast-food').click(function(){
 
 $('#healthy-food').click(function(){
   var containerInfo = document.getElementById('print-info');
-
+  containerInfo.innerHTML = "";
   for(var i = 0; i < restaurants.length; i++){
       var isHealthyFood = restaurants[i].healthyFood;
       
@@ -216,7 +216,7 @@ $('#healthy-food').click(function(){
 
 $('#cheap').click(function(){
   var containerInfo = document.getElementById('print-info');
-
+  containerInfo.innerHTML = "";
   for(var i = 0; i < restaurants.length; i++){
       var isCheap = restaurants[i].cheap;
       
