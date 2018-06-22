@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Map</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="splash(1000)">
+    <div id="splashscreen">
+        <h1>Foodmap</h1>
+    </div>
+    <!--Header-->
+    <header id="main" class="general-container" >
+        <div class="container">
+            <div class="row">
+                <h2>FoodMap</h2>  
+            </div>
+            <br>
+        </div>
+    </header>
+    <!--Map Section-->
+    <div class="container">
+        <section class="row">
+            <div id="map"></div>
+        </section>
+    </div>
+    <!--Interactive Section-->
+    <div class="container int-section">
+        <section class="row">
+            <div class="col-sm-12 col-md-12">
+                <h3>Comida cerca de ti</h3>
+            </div>
+            <div class="btn-group col-sm-12 col-md-12">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Busqueda clasificada
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Restaurantes</button>
+                    <button class="dropdown-item" type="button">Cafeterias</button>
+                    <button class="dropdown-item" type="button">Comida rápida</button>
+                    <button class="dropdown-item" type="button">Comida saludable</button>
+                    <button class="dropdown-item" type="button">Precio accesible</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/assets/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApycdx4-KgNQ2JdnZE_U5vn_13yGe9WyI&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
