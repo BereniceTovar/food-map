@@ -11,7 +11,7 @@ function splash(param) {
 
 var restaurants = [
   {
-    name: 'bostonMarket',
+    name: 'Boston Market',
     restaurant: true,
     coffeshop: false,
     cheap: false,
@@ -20,7 +20,7 @@ var restaurants = [
   },
   
   {
-    name: 'chaiChop',
+    name: 'Chai Chop',
     restaurant: false,
     coffeshop: true,
     cheap: true,
@@ -29,34 +29,16 @@ var restaurants = [
   },
   
   {
-    name: 'cafeChaiRosas',
-    restaurant: false,
-    coffeshop: true,
-    cheap: true,
-    fastFood: false,
-    healthyFood: true
-  },
-  
-  {
-    name: 'pastesDulceYsalado',
+    name: 'Pastes Dulce Y Salado',
     restaurant: false,
     coffeshop: false,
     cheap: true,
     fastFood: true,
     healthyFood: false
   },
-  
+    
   {
-    name: 'cocinaLasRosas', 
-    restaurant: true,
-    coffeshop: false,
-    cheap: true,
-    fastFood: false,
-    healthyFood: true
-  },
-  
-  {
-    name: 'lasFabulosasPapas', 
+    name: 'Las Fabulosas Papas', 
     restaurant: true,
     coffeshop: false,
     cheap: false,
@@ -65,16 +47,16 @@ var restaurants = [
   },
   
   {
-    name: 'tooginosPizza',
+    name: 'Tooginos Pizza',
     restaurant: true,
     coffeshop: false,
     cheap: false,
     fastFood: true,
-    healthyFood: false
+    healthyFood: false,
   },
   
   {
-    name: 'laCocinaDeLulu',
+    name: 'La Cocina De Lulu',
     restaurant: true,
     coffeshop: false,
     cheap: true,
@@ -83,7 +65,7 @@ var restaurants = [
   },
   
   {
-    name: 'laSolovina',
+    name: 'La Solovina',
     restaurant: true,
     coffeshop: false,
     cheap: false,
@@ -92,7 +74,7 @@ var restaurants = [
   },
   
   {
-    name: 'laCiudadDeLosAlmuerzos',
+    name: 'La Ciudad De Los Almuerzos',
     restaurant: true,
     coffeshop: false,
     cheap: false,
@@ -101,7 +83,7 @@ var restaurants = [
   },
   
   {
-    name: 'haciendaCanelos',
+    name: 'Hacienda Canelos',
     restaurant: true,
     coffeshop: false,
     cheap: false,
@@ -110,20 +92,153 @@ var restaurants = [
   },
         
   {
-    name: 'bonSalads', 
+    name: 'Bon Salads', 
     restaurant: false,
     coffeshop: false,
     cheap: true,
     fastFood: false,
     healthyFood: true
   }
-
 ];
 
-console.log(restaurants[0].name);
+//Función para obtener a los restaurantes
+$('#restaurants').click(function(){
+  var containerInfo = document.getElementById('print-info');
 
-for(var i = 0; i<restaurants.length; i++)
-var allRestaurants = 
+  for(var i = 0; i < restaurants.length; i++){
+      var isRestaurant = restaurants[i].restaurant;
+      //console.log(isRestaurant)
+      if(isRestaurant == true){
+        var nameRestaurants = restaurants[i].name; //nombreId
+        restaurants[i].id = i;
+        //console.log(nameRestaurants);
+        //Div que contiene el nuevo elemento
+        var newCont = document.createElement('div');//id rest
+
+        //Nodo que contiene a nuevos elementos
+        var namesRestaurants = document.createTextNode(nameRestaurants); 
+
+        //Contenedor del nodo
+        var elementContainer = document.createElement('a');
+        elementContainer.setAttribute('href', "#"+i);
+        elementContainer.setAttribute('data-toggle', 'modal');
+        elementContainer.setAttribute('data-target', '#modal1');
+        //elementContainer.setAttribute(attr2);
+
+        elementContainer.appendChild(namesRestaurants);
+        newCont.appendChild(elementContainer);
+        containerInfo.appendChild(newCont);   
+        
+        newCont.id = restaurants[i].id;
+    }
+  }
+});
+
+//Función para obtener a las cafeterias
+$('#coffe-shops').click(function(){
+  var containerInfo = document.getElementById('print-info');
+
+  for(var i = 0; i < restaurants.length; i++){
+      var isCoffeShop = restaurants[i].coffeshop;
+      //console.log(isCoffeShop)
+      if(isCoffeShop == true){
+        var nameCoffeShop = restaurants[i].name; //nombreId
+        //console.log(nameCoffeShop);
+        //Div que contiene el nuevo elemento
+        var newCont = document.createElement('div');//id rest
+
+        //Nodo que contiene a nuevos elementos
+        var namesCoffeShop = document.createTextNode(nameCoffeShop); 
+
+        //Contenedor del nodo
+        var elementContainer = document.createElement('a');
+
+        elementContainer.appendChild(namesCoffeShop);
+        newCont.appendChild(elementContainer);
+        containerInfo.appendChild(newCont);   
+    }
+    
+  }
+});
+
+//Función para obtener a la comida rapida
+$('#fast-food').click(function(){
+  var containerInfo = document.getElementById('print-info');
+
+  for(var i = 0; i < restaurants.length; i++){
+      var isFastFood = restaurants[i].fastFood;
+      
+      if(isFastFood == true){
+        var nameFastFood = restaurants[i].name; //nombreId
+        
+        //Div que contiene el nuevo elemento
+        var newCont = document.createElement('div');//id rest
+
+        //Nodo que contiene a nuevos elementos
+        var namesFastFood = document.createTextNode(nameFastFood); 
+
+        //Contenedor del nodo
+        var elementContainer = document.createElement('a');
+
+        elementContainer.appendChild(namesFastFood);
+        newCont.appendChild(elementContainer);
+        containerInfo.appendChild(newCont);   
+    }
+    
+  }
+});
+
+$('#healthy-food').click(function(){
+  var containerInfo = document.getElementById('print-info');
+
+  for(var i = 0; i < restaurants.length; i++){
+      var isHealthyFood = restaurants[i].healthyFood;
+      
+      if(isHealthyFood == true){
+        var nameHealthyFood = restaurants[i].name; //nombreId
+        
+        //Div que contiene el nuevo elemento
+        var newCont = document.createElement('div');//id rest
+
+        //Nodo que contiene a nuevos elementos
+        var namesHealthyFood = document.createTextNode(nameHealthyFood); 
+
+        //Contenedor del nodo
+        var elementContainer = document.createElement('a');
+
+        elementContainer.appendChild(namesHealthyFood);
+        newCont.appendChild(elementContainer);
+        containerInfo.appendChild(newCont);   
+    }
+    
+  }
+});
+
+$('#cheap').click(function(){
+  var containerInfo = document.getElementById('print-info');
+
+  for(var i = 0; i < restaurants.length; i++){
+      var isCheap = restaurants[i].cheap;
+      
+      if(isCheap == true){
+        var nameCheap = restaurants[i].name; //nombreId
+        
+        //Div que contiene el nuevo elemento
+        var newCont = document.createElement('div');//id rest
+
+        //Nodo que contiene a nuevos elementos
+        var namesCheap = document.createTextNode(nameCheap); 
+
+        //Contenedor del nodo
+        var elementContainer = document.createElement('a');
+
+        elementContainer.appendChild(namesCheap);
+        newCont.appendChild(elementContainer);
+        containerInfo.appendChild(newCont);   
+    }
+    
+  }
+});
 
 
       

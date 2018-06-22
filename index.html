@@ -38,17 +38,49 @@
                     Busqueda clasificada
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <button class="dropdown-item" type="button">Restaurantes</button>
-                    <button class="dropdown-item" type="button">Cafeterias</button>
-                    <button class="dropdown-item" type="button">Comida rápida</button>
-                    <button class="dropdown-item" type="button">Comida saludable</button>
-                    <button class="dropdown-item" type="button">Precio accesible</button>
+                    <button id="restaurants" class="dropdown-item" type="button">Restaurantes</button>
+                    <button id="coffe-shops" class="dropdown-item" type="button">Cafeterias</button>
+                    <button id="fast-food" class="dropdown-item" type="button">Comida rápida</button>
+                    <button id="healthy-food" class="dropdown-item" type="button">Comida saludable</button>
+                    <button id="cheap" class="dropdown-item" type="button">Precio accesible</button>
                 </div>
             </div>
         </section>
     </div>
-
-
+    <!--Info Section-->
+    <div class="container">
+        <section class="row">
+            <div id="print-info">
+            </div>
+            <!--Modal Sign Up-->
+            <div class="modal fade" id="modal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <div class="col-md-3 col-sm-3">
+                                <a id ="first-icon" href="#"><i class="icon-return fas fa-chevron-left "></i></a>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <h3 class="col-md-12 col-sm-12">Sign Up</h3>
+                                <p class="col-md-12 col-sm-12">Join now for free ride credit</p>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <p>Info</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#verify-phone" data-toggle="modal">
+                                <button id="btn-next" class="btn-send btn btn-light" type="submit" disabled>NEXT</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
