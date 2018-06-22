@@ -241,8 +241,6 @@ $('#cheap').click(function(){
     
   }
 });
-
-
       
       //API Google
       
