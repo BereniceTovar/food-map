@@ -19,10 +19,10 @@ En este ejercicio se desarrolla una web-app que busca restaurantes cercanos. Se 
 
 ## Visualización desktop
 
-![Foodmap Mobile](assets/images/desktop1.png)
+![Foodmap Desktop](assets/images/desktop1.png)
 
-![Foodmap Mobile](assets/images/desktop2.png)
+![Foodmap Desktop](assets/images/desktop2.png)
 
-![Foodmap Mobile](assets/images/desktop3.png)
+![Foodmap Desktop](assets/images/desktop3.png)
 
-![Foodmap Mobile](assets/images/desktop4.png)
+![Foodmap Desktop](assets/images/desktop4.png)
